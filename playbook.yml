@@ -1,0 +1,17 @@
+hosts: all
+become: yes
+
+tasks:
+    - name:Install httpd
+     yum: name=httpd state=present update_cache=true
+    - name: Start Docker
+     service: name=httpd state=Present
+
+    - name: Copy a new index.html file into place, backing up the original if it differs from the copied version
+      copy:
+        src: /home/ec2-user/index.html
+        dest: /var/www/html/index.html
+        owner: ec2-user
+        group: ec2-user
+        mode:  '0644'
+        backup: yes

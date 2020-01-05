@@ -6,7 +6,7 @@
       - name: Install httpd
         yum: name=httpd state=present update_cache=true
       - name: Start httpd
-        service: name=httpd state=Present
+        service: name=httpd state=present
 
       - name: Copy a new index.html file into place, backing up the original if it differs from the copied version
         copy:

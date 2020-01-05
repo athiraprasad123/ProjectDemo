@@ -1,6 +1,6 @@
 [amazonlinux]
-3.134.87.139
-3.19.232.6
+18.220.74.50
+3.134.97.143
 
 [amazonlinux:vars]
 ansible_user=ec2-user

@@ -2,7 +2,7 @@ hosts: all
 become: yes
 
 tasks:
-    - name:Install httpd
+    - name: Install httpd
      yum: name=httpd state=present update_cache=true
     - name: Start Docker
      service: name=httpd state=Present

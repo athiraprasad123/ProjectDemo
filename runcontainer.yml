@@ -1,7 +1,8 @@
     ---
     - hosts: all
       become: yes
-       tasks:
+       
+      tasks:
          - name: Build a docker image
            command: docker build -t web /home/ec2-user
          - name: Remove a container 
